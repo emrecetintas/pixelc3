@@ -1,0 +1,27 @@
+# Local projects, reference material and build output
+/.local/
+/dist/
+/build/
+/exports/
+*.sbsar
+*.sbsasm
+*.sbs
+/docs/*_controls.json
+*.blend
+*.blend[0-9]*
+*.blend@
+*.log
+
+# Python, editors and OS files
+__pycache__/
+*.py[cod]
+.venv/
+.pytest_cache/
+.ruff_cache/
+.coverage
+.vscode/
+.idea/
+.DS_Store
+._*
+.env
+.env.*

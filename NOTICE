@@ -1,0 +1,34 @@
+PixelC3
+Copyright (C) 2026 PixelC3 contributors
+SPDX-License-Identifier: GPL-3.0-or-later
+
+PixelC3 and its procedural examples are distributed under the GNU
+General Public License, version 3 or later. See LICENSE for the complete
+license and warranty disclaimer. The example images were generated with
+the procedure in tools/blender_demo.py.
+
+Reference palettes
+
+The Atari standard NTSC and SECAM RGB tables are adapted from Stella:
+Copyright (c) 1995-2026 Bradford W. Mott, Stephen Anthony and the Stella Team.
+Stella permits use under the GNU GPL version 2 or any later version. The
+adapted data is distributed with PixelC3 under GPL version 3 or later.
+The NTSC table omits the unused placeholder entries from the Stella source.
+
+Source: https://github.com/stella-emu/stella/blob/master/src/common/PaletteHandler.cxx
+License notice: https://github.com/stella-emu/stella/blob/master/Copyright.txt
+
+Apple II NTSC RGB values: Robert Munafo's published color calculations.
+C64 PAL colors: independent implementation of Philip 'Pepto' Timmermann's
+Colodore reference model and documented default display settings.
+NES RGB DAC values: NESdev's documented 2C03/2C05 palette table.
+Further sources and representation limits are documented in
+docs/PALETTE_REFERENCES.md.
+
+Processing references
+
+Oklab conversion uses Björn Ottosson's published transform.
+https://bottosson.github.io/posts/oklab/
+
+Overlay and Soft Light follow W3C Compositing and Blending Level 1.
+https://www.w3.org/TR/compositing-1/#blendingseparable

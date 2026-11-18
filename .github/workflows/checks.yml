@@ -1,0 +1,26 @@
+name: Checks
+
+on: [push, pull_request]
+
+permissions:
+  contents: read
+
+jobs:
+  test-and-build:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python: ['3.11', '3.13']
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v6
+        with:
+          python-version: ${{ matrix.python }}
+      - name: Install NumPy
+        run: python -m pip install "numpy>=1.26,<3"
+      - name: Run processing and worker tests
+        run: python -m unittest discover -s tests -p test_processing.py
+      - name: Build Blender install archives
+        run: python tools/build.py
